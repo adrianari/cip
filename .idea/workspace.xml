@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2bf6d8f3-a497-4ccf-9bd8-10c5ff5bf671" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/cip.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/douglas_ch.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/douglas_de.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ottos.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1ZSCxxknH9i3OSmQmcGbzOUX6MG" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2bf6d8f3-a497-4ccf-9bd8-10c5ff5bf671" name="Default Changelist" comment="" />
+      <created>1584823358844</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1584823358844</updated>
+      <workItem from="1584823361824" duration="1182000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="206" y="139" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584824715294">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state x="206" y="139" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1500.960@0.0.1500.960" timestamp="1584824715294" />
+    <state x="254" y="126" key="SettingsEditor" timestamp="1584823578948">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state x="254" y="126" key="SettingsEditor/0.0.1500.960@0.0.1500.960" timestamp="1584823578948" />
+    <state x="458" y="309" key="com.intellij.ide.util.TipDialog" timestamp="1584823364266">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state x="458" y="309" key="com.intellij.ide.util.TipDialog/0.0.1500.960@0.0.1500.960" timestamp="1584823364266" />
+    <state x="560" y="400" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1584824808670">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state x="560" y="400" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1500.960@0.0.1500.960" timestamp="1584824808670" />
+  </component>
+</project>
