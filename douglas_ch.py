@@ -40,7 +40,7 @@ class ProductFetcher():
                 crawled = Product(title, brand_line, price, base_price) #, image)
                 articles.append(crawled)
 
-            next_page = doc.select_one(".pagination a.link.link--text.pagination__arrow.active")
+            next_page = doc.select_one(".pagination-title a.link.link--text.pagination__arrow.active")
             if next_page:
                 next_href = next_page.attrs["href"]
                 next_href = urljoin(url, next_href)
@@ -59,4 +59,4 @@ with open( 'douglas.ch.csv', 'w', newline='', encoding= "utf-8" ) as csvfile:
     blogwriter = csv.writer(csvfile, delimiter=';', quotechar='"', quoting=csv.QUOTE_MINIMAL)
 
     for article in fetcher.fetch():
-        blogwriter.writerow( [article.title, article.stories, article.picture, article.read_more] )
+        blogwriter.writerow( [article.title, article.brand_line, article.price, article.base_price] )
