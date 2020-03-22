@@ -42,14 +42,11 @@ class ProductFetcher():
                 articles.append(crawled)
 
             for x in doc.find_all("a", class_="link link--text pagination__arrow active"):
-                y = x.get("href")
-                y = urljoin(url,y)
-                if y not in homepages:
-                    next = urljoin(url, y)
-                    url = next
-                else:
-                    print("stuck in a loop")
+                if urljoin(url,x.get("href")) not in homepages:
+                    url = urljoin(url,x.get("href"))
                     break
+                else:
+                    pass
 
 
             print(homepages)
