@@ -23,10 +23,6 @@ class ProductFetcher():
         r = requests.get(url)
         doc = BeautifulSoup(r.text, "html.parser")
 
-        homepages = []
-        for x in doc.find_all("a", class_ = "link link--no-decoration pagination-title__option-link active"):
-            homepages.append(x.get("href"))
-
         for product in doc.select(".product-tile"):
             title = product.select_one(".product-tile__top-brand").text
             brand_line = product.select_one(".product-tile__brand-line").text
@@ -34,8 +30,6 @@ class ProductFetcher():
             price = product.select_one(".product-price__no-discount")
             if price:
                 price = price.text
-            else:
-                continue
             base_price = product.select_one(".product-price__base-price").text
             #image = product.select_one("img").attrs["src"]
 
@@ -43,17 +37,44 @@ class ProductFetcher():
             crawled = Product(title, brand_line, price, base_price) #, image)
             articles.append(crawled)
 
+        homepages = []
+        for x in doc.find_all("a", class_ = "link link--no-decoration pagination-title__option-link active"):
+            homepages.append(x.get("href"))
+
+        print(homepages)
+
+        ################
+
+
+        for thing in homepages:
+            nextone = urljoin("https://www.douglas.ch/", str(thing))
+            print(nextone)
+
+            link_two = requests.get(nextone)
+            suppe = BeautifulSoup(link_two.text, "html.parser")
+
+
+            for product in suppe.select(".product-tile"):
+                title = product.select_one(".product-tile__top-brand").text
+                brand_line = product.select_one(".product-tile__brand-line").text
+                #category = product.select_one(".product-tile__category").text
+                price = product.select_one(".product-price__no-discount")
+                if price:
+                    price = price.text
+                base_price = product.select_one(".product-price__base-price").text
+                #image = product.select_one("img").attrs["src"]
+
+
+                crawled = Product(title, brand_line, price, base_price) #, image)
+                articles.append(crawled)
 
         return articles
-
-
-
 
 
 #for article in articles:
 #    print(article.title)
 fetcher = ProductFetcher()
-articles = fetcher.fetch()
+#articles = fetcher.fetch()
 
 with open( 'douglas.ch.csv', 'w', newline='', encoding= "utf-8" ) as csvfile:
     blogwriter = csv.writer(csvfile, delimiter=';', quotechar='"', quoting=csv.QUOTE_MINIMAL)
