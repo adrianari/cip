@@ -1,17 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2bf6d8f3-a497-4ccf-9bd8-10c5ff5bf671" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/cip.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/douglas_ch.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/douglas_de.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ottos.py" afterDir="false" />
+    <list default="true" id="2bf6d8f3-a497-4ccf-9bd8-10c5ff5bf671" name="Default Changelist" comment="Establishing the files">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +20,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="JupyterTrust" id="cb6b0112-e0ae-4d76-abab-6d9544600b1c" />
   <component name="ProjectId" id="1ZSCxxknH9i3OSmQmcGbzOUX6MG" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -37,7 +30,129 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../untitled/Block04/Crawler_Aufgabe_Adriana_Ricklin.py" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunManager" selected="Python.test">
+    <configuration name="Crawler_Aufgabe_Adriana_Ricklin" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="cip" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../untitled/Block04" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../untitled/Block04/Crawler_Aufgabe_Adriana_Ricklin.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="anderertest" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="cip" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/anderertest.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="douglas_ch" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="cip" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/douglas_ch.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="cip" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="cip" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.test" />
+        <item itemvalue="Python.anderertest" />
+        <item itemvalue="Python.test2" />
+        <item itemvalue="Python.Crawler_Aufgabe_Adriana_Ricklin" />
+        <item itemvalue="Python.douglas_ch" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -61,29 +176,105 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1584823358844</updated>
-      <workItem from="1584823361824" duration="1182000" />
+      <workItem from="1584823361824" duration="1936000" />
+      <workItem from="1584899470746" duration="15732000" />
     </task>
+    <task id="LOCAL-00001" summary="Establishing the files">
+      <created>1584824866455</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1584824866455</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Tets zu Douglas_CH">
+      <created>1584910261739</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1584910261739</updated>
+    </task>
+    <task id="LOCAL-00003" summary="irgendwas">
+      <created>1584911758251</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1584911758251</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Establishing the files" />
+    <MESSAGE value="Tets zu Douglas_CH" />
+    <MESSAGE value="irgendwas" />
+    <option name="LAST_COMMIT_MESSAGE" value="irgendwas" />
   </component>
   <component name="WindowStateProjectService">
     <state x="206" y="139" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584824715294">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="206" y="139" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1500.960@0.0.1500.960" timestamp="1584824715294" />
+    <state x="385" y="80" key="CommitChangelistDialog2" timestamp="1584911757794">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state x="385" y="80" key="CommitChangelistDialog2/0.0.1500.960@0.0.1500.960" timestamp="1584911757794" />
+    <state x="93" y="93" width="1313" height="773" key="DiffContextDialog" timestamp="1584903186229">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state x="93" y="93" width="1313" height="773" key="DiffContextDialog/0.0.1500.960@0.0.1500.960" timestamp="1584903186229" />
+    <state x="531" y="239" key="FileChooserDialogImpl" timestamp="1584912862053">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state x="531" y="239" key="FileChooserDialogImpl/0.0.1500.960@0.0.1500.960" timestamp="1584912862053" />
+    <state width="1458" height="257" key="GridCell.Tab.0.bottom" timestamp="1584915431696">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state width="1458" height="257" key="GridCell.Tab.0.bottom/0.0.1500.960@0.0.1500.960" timestamp="1584915431696" />
+    <state width="1458" height="257" key="GridCell.Tab.0.center" timestamp="1584915431696">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state width="1458" height="257" key="GridCell.Tab.0.center/0.0.1500.960@0.0.1500.960" timestamp="1584915431696" />
+    <state width="1458" height="257" key="GridCell.Tab.0.left" timestamp="1584915431696">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state width="1458" height="257" key="GridCell.Tab.0.left/0.0.1500.960@0.0.1500.960" timestamp="1584915431696" />
+    <state width="1458" height="257" key="GridCell.Tab.0.right" timestamp="1584915431696">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state width="1458" height="257" key="GridCell.Tab.0.right/0.0.1500.960@0.0.1500.960" timestamp="1584915431696" />
     <state x="254" y="126" key="SettingsEditor" timestamp="1584823578948">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="254" y="126" key="SettingsEditor/0.0.1500.960@0.0.1500.960" timestamp="1584823578948" />
-    <state x="458" y="309" key="com.intellij.ide.util.TipDialog" timestamp="1584823364266">
+    <state x="343" y="217" key="Vcs.Push.Dialog.v2" timestamp="1584911761791">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state x="458" y="309" key="com.intellij.ide.util.TipDialog/0.0.1500.960@0.0.1500.960" timestamp="1584823364266" />
-    <state x="560" y="400" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1584824808670">
+    <state x="343" y="217" key="Vcs.Push.Dialog.v2/0.0.1500.960@0.0.1500.960" timestamp="1584911761791" />
+    <state x="458" y="309" key="com.intellij.ide.util.TipDialog" timestamp="1584899472074">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state x="560" y="400" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1500.960@0.0.1500.960" timestamp="1584824808670" />
+    <state x="458" y="309" key="com.intellij.ide.util.TipDialog/0.0.1500.960@0.0.1500.960" timestamp="1584899472074" />
+    <state x="560" y="400" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1584901728219">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state x="560" y="400" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1500.960@0.0.1500.960" timestamp="1584901728219" />
+    <state x="496" y="285" key="git4idea.merge.GitPullDialog" timestamp="1584901739277">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state x="496" y="285" key="git4idea.merge.GitPullDialog/0.0.1500.960@0.0.1500.960" timestamp="1584901739277" />
+    <state x="415" y="208" key="search.everywhere.popup" timestamp="1584912425610">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state x="415" y="208" key="search.everywhere.popup/0.0.1500.960@0.0.1500.960" timestamp="1584912425610" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/cip$Crawler_Aufgabe_Adriana_Ricklin.coverage" NAME="Crawler_Aufgabe_Adriana_Ricklin Coverage Results" MODIFIED="1584907277658" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../untitled/Block04" />
+    <SUITE FILE_PATH="coverage/cip$anderertest.coverage" NAME="anderertest Coverage Results" MODIFIED="1584914917876" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/cip$test.coverage" NAME="test Coverage Results" MODIFIED="1584915431688" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/cip$test2.coverage" NAME="test2 Coverage Results" MODIFIED="1584914788108" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/cip$douglas_ch.coverage" NAME="douglas_ch Coverage Results" MODIFIED="1584902894857" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
