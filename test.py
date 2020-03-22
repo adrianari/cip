@@ -41,9 +41,7 @@ class ProductFetcher():
         for x in doc.find_all("a", class_ = "link link--no-decoration pagination-title__option-link active"):
             homepages.append(x.get("href"))
 
-        print(homepages)
-
-        ################
+        ################ Seite 2 bis Ende
 
 
         for thing in homepages:
