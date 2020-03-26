@@ -6,9 +6,9 @@ import time
 
 
 class Product():
-    def __init__(self, name, size, price):
+    def __init__(self, name, size_ml, price):
         self.name = name
-        self.size = size
+        self.size = size_ml
         self.price = price
         #self.konprice = konprice #konkurrenzprice
 
@@ -25,10 +25,10 @@ for element in soup.find_all("div", attrs={"class":"product-item-info per-produc
     description = element.select_one("h2").text
     name = description[:-5]
     print(name)
-    size = description[-6:]
-    if size[0] == " ":
-        size = description[-5:]
-    print(size)
+    size_ml = description[-6:-2]
+    if size_ml[0] == " ":
+        size_ml = description[-5:-2]
+    print(size_ml)
     for thing in element.find_all("span"):
         daten = thing.get("data-price-amount")
         if daten != None:
@@ -37,8 +37,6 @@ for element in soup.find_all("div", attrs={"class":"product-item-info per-produc
             continue
         print(price)
 
-
-
-
-#    konprice = element.select_one("p", attrs={"class":"competitive-price"}).text
+    # for ding in element.select("div", class_ = ("price-box price-final_price fl-product-price")):
+    #     print(ding)
 
