@@ -20,7 +20,17 @@ time.sleep(1)
 r = requests.get(url)
 soup = BeautifulSoup(r.text, "html.parser")
 
+#Seiten
+pages = []
+for filtering in soup.find_all("a", class_="page"):
+    seiten = filtering.get("href")
+    if seiten in pages:
+        continue
+    else:
+        pages.append(seiten)
+print(pages)
 
+#Parfums
 for element in soup.find_all("div", attrs={"class":"product-item-info per-product category-products-grid"}):
     description = element.select_one("h2").text
     name = description[:-5]
@@ -39,4 +49,3 @@ for element in soup.find_all("div", attrs={"class":"product-item-info per-produc
 
     # for ding in element.select("div", class_ = ("price-box price-final_price fl-product-price")):
     #     print(ding)
-
