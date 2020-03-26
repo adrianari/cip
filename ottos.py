@@ -6,9 +6,11 @@ import time
 
 
 class Product():
-    def __init__(self, description, price):
-        self.description = description
+    def __init__(self, name, size, price):
+        self.name = name
+        self.size = size
         self.price = price
+        #self.konprice = konprice #konkurrenzprice
 
 
 url = "https://www.ottos.ch/de/parfum/damenparfum.html"
@@ -19,11 +21,24 @@ r = requests.get(url)
 soup = BeautifulSoup(r.text, "html.parser")
 
 
+for element in soup.find_all("div", attrs={"class":"product-item-info per-product category-products-grid"}):
+    description = element.select_one("h2").text
+    name = description[:-5]
+    print(name)
+    size = description[-6:]
+    if size[0] == " ":
+        size = description[-5:]
+    print(size)
+    for thing in element.find_all("span"):
+        daten = thing.get("data-price-amount")
+        if daten != None:
+            price = daten
+        else:
+            continue
+        print(price)
 
-for item in soup.select("h2", {"class_":("product details")}):
-    print(item.text)
 
-for price in soup.select("span", {"class_":"price-wrapper"}):
-    x = price.get("data-price-amount")
-    if x != None:
-        print(x)
+
+
+#    konprice = element.select_one("p", attrs={"class":"competitive-price"}).text
+
