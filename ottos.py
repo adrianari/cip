@@ -26,7 +26,6 @@ class ProductFetcher():
             for cat in cats:
                 if cat in tester:
                     kategorie = cat
-                    print(kategorie)
                 else:
                     continue
             if kategorie == "EdP":
@@ -76,7 +75,7 @@ class ProductFetcher():
                 continue
             else:
                 pages.append(seite)
-        print(pages)
+
 
 
 
@@ -97,7 +96,6 @@ class ProductFetcher():
                         price = daten
                     else:
                         continue
-                    print(price)
 
                     crawled = Product(name, kategorie, size_ml, price)
                     articles.append(crawled)
