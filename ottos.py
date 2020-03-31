@@ -123,7 +123,7 @@ class ProductFetcher():
 fetcher = ProductFetcher()
 articles = fetcher.fetch()
 
-with open( 'testingtest.csv', 'w', newline='', encoding= "utf-8" ) as csvfile:
+with open( 'ottos.csv', 'w', newline='', encoding= "utf-8" ) as csvfile:
     blogwriter = csv.writer(csvfile, delimiter=';', quotechar='"', quoting=csv.QUOTE_MINIMAL)
 
     for article in fetcher.fetch():
