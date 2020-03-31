@@ -26,7 +26,7 @@ class ProductFetcher():
         for product in doc.select(".product-tile"):
             title = product.select_one(".product-tile__top-brand").text
             brand_line = product.select_one(".product-tile__brand-line").text
-            #category = product.select_one(".product-tile__category").text
+            category = product.select_one(".product-tile__category").text
             price = product.select_one(".product-price__no-discount")
             if price:
                 price = price.text

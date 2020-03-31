@@ -29,6 +29,8 @@ class ProductFetcher():
             description = element.select_one("h2").text
             name = description[:-6]
             print(name)
+
+            #kategoriebestimmung
             cats = ["Bodylotion", "Bodyspray", "Eau de Cologne", "Eau de Parfum", "Eau de Toilette", "Geschenkset", "Bodymist"]
             for cat in cats:
                 if cat in name:
@@ -36,8 +38,6 @@ class ProductFetcher():
                     print(kategorie)
                 else:
                     continue
-                if kategorie == None:
-                    kategorie = "Anderes"
             size_ml = description[-6:-2]
             if size_ml[0] == " ":
                 size_ml = description[-5:-2]
@@ -75,6 +75,8 @@ class ProductFetcher():
                 description = element.select_one("h2").text
                 name = description[:-6]
                 print(name)
+
+                #kategoriebestimmung
                 cats = ["Bodylotion", "Bodyspray", "Eau de Cologne", "Eau de Parfum", "Eau de Toilette", "Geschenkset", "Bodymist"]
                 for cat in cats:
                     if cat in name:
@@ -82,8 +84,7 @@ class ProductFetcher():
                         print(kategorie)
                     else:
                         continue
-                    if kategorie == None:
-                        kategorie = "Anderes"
+
                 size_ml = description[-6:-2]
                 if size_ml[0] == " ":
                     size_ml = description[-5:-2]
