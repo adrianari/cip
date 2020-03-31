@@ -5,8 +5,9 @@ import time
 import csv
 
 class Product():
-    def __init__(self, name, size_ml, price):
+    def __init__(self, name, kategorie, size_ml, price):
         self.name = name
+        self.kategorie = kategorie
         self.size = size_ml
         self.price = price
         #self.konprice = konprice #konkurrenzprice
@@ -14,6 +15,7 @@ class Product():
 class ProductFetcher():
     def fetch(self):
         url = "https://www.ottos.ch/de/parfum/damenparfum.html"
+
 
 
         articles = []
@@ -27,6 +29,15 @@ class ProductFetcher():
             description = element.select_one("h2").text
             name = description[:-6]
             print(name)
+            cats = ["Bodylotion", "Bodyspray", "Eau de Cologne", "Eau de Parfum", "Eau de Toilette", "Geschenkset", "Bodymist"]
+            for cat in cats:
+                if cat in name:
+                    kategorie = cat
+                    print(kategorie)
+                else:
+                    continue
+                if kategorie == None:
+                    kategorie = "Anderes"
             size_ml = description[-6:-2]
             if size_ml[0] == " ":
                 size_ml = description[-5:-2]
@@ -39,7 +50,7 @@ class ProductFetcher():
                     continue
                 print(price)
 
-            crawled = Product(name, size_ml, price)
+            crawled = Product(name, kategorie, size_ml, price)
             articles.append(crawled)
 
         #Seiten
@@ -62,8 +73,17 @@ class ProductFetcher():
 
             for element in suppe.find_all("div", attrs={"class":"product-item-info per-product category-products-grid"}):
                 description = element.select_one("h2").text
-                name = description[:-5]
+                name = description[:-6]
                 print(name)
+                cats = ["Bodylotion", "Bodyspray", "Eau de Cologne", "Eau de Parfum", "Eau de Toilette", "Geschenkset", "Bodymist"]
+                for cat in cats:
+                    if cat in name:
+                        kategorie = cat
+                        print(kategorie)
+                    else:
+                        continue
+                    if kategorie == None:
+                        kategorie = "Anderes"
                 size_ml = description[-6:-2]
                 if size_ml[0] == " ":
                     size_ml = description[-5:-2]
@@ -76,7 +96,7 @@ class ProductFetcher():
                         continue
                     print(price)
 
-                    crawled = Product(name, size_ml, price)
+                    crawled = Product(name, kategorie, size_ml, price)
                     articles.append(crawled)
 
 
@@ -103,7 +123,7 @@ with open( 'ottos.csv', 'w', newline='', encoding= "utf-8" ) as csvfile:
     blogwriter = csv.writer(csvfile, delimiter=';', quotechar='"', quoting=csv.QUOTE_MINIMAL)
 
     for article in fetcher.fetch():
-        blogwriter.writerow( [article.name, article.size, article.price] )
+        blogwriter.writerow( [article.name, article.kategorie, article.size, article.price] )
 
 
 
