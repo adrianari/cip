@@ -17,6 +17,9 @@ class ProductFetcher():
     def fetch(self):
         url = "https://www.ottos.ch/de/parfum/damenparfum.html"
 
+        def namer(bubble):
+            name = bubble[:-6]
+            return name
 
         def catsmaker(tester):
             cats = ["Bodylotion", "Bodyspray", "Eau de Cologne", "Eau de Parfum", "Eau de Toilette", "Geschenkset", "Bodymist", "Eau Frâiche", "Eau Fraîche", "Spray", "Körperspray", "EdP"]
@@ -36,6 +39,12 @@ class ProductFetcher():
 
             return kategorie
 
+        def sizer(data):
+            size_ml = data[-6:-2]
+            if size_ml[0] == " ":
+                size_ml = data[-5:-2]
+            return size_ml
+
 
         articles = []
         time.sleep(1)
@@ -43,16 +52,13 @@ class ProductFetcher():
         soup = BeautifulSoup(r.text, "html.parser")
 
 
-
         for element in soup.find_all("div", attrs={"class":"product-item-info per-product category-products-grid"}):
 
             description = element.select_one("h2").text
-            name = description[:-6]
+            name = namer(description)
             print(name)
             kategorie = catsmaker(name)
-            size_ml = description[-6:-2]
-            if size_ml[0] == " ":
-                size_ml = description[-5:-2]
+            size_ml = sizer(description)
             print(size_ml)
             for thing in element.find_all("span"):
                 daten = thing.get("data-price-amount")
@@ -85,12 +91,10 @@ class ProductFetcher():
 
             for element in suppe.find_all("div", attrs={"class":"product-item-info per-product category-products-grid"}):
                 description = element.select_one("h2").text
-                name = description[:-6]
+                name = namer(description)
                 print(name)
                 kategorie = catsmaker(name)
-                size_ml = description[-6:-2]
-                if size_ml[0] == " ":
-                    size_ml = description[-5:-2]
+                size_ml = sizer(description)
                 print(size_ml)
                 for thing in element.find_all("span"):
                     daten = thing.get("data-price-amount")
@@ -121,7 +125,7 @@ class ProductFetcher():
 
 
 fetcher = ProductFetcher()
-articles = fetcher.fetch()
+#articles = fetcher.fetch()
 
 with open( 'ottos.csv', 'w', newline='', encoding= "utf-8" ) as csvfile:
     blogwriter = csv.writer(csvfile, delimiter=';', quotechar='"', quoting=csv.QUOTE_MINIMAL)
