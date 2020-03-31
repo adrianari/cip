@@ -56,17 +56,14 @@ class ProductFetcher():
 
             description = element.select_one("h2").text
             name = namer(description)
-            print(name)
             kategorie = catsmaker(name)
             size_ml = sizer(description)
-            print(size_ml)
             for thing in element.find_all("span"):
                 daten = thing.get("data-price-amount")
                 if daten != None:
                     price = daten
                 else:
                     continue
-                print(price)
 
             crawled = Product(name, kategorie, size_ml, price)
             articles.append(crawled)
@@ -92,10 +89,8 @@ class ProductFetcher():
             for element in suppe.find_all("div", attrs={"class":"product-item-info per-product category-products-grid"}):
                 description = element.select_one("h2").text
                 name = namer(description)
-                print(name)
                 kategorie = catsmaker(name)
                 size_ml = sizer(description)
-                print(size_ml)
                 for thing in element.find_all("span"):
                     daten = thing.get("data-price-amount")
                     if daten != None:
@@ -106,8 +101,6 @@ class ProductFetcher():
 
                     crawled = Product(name, kategorie, size_ml, price)
                     articles.append(crawled)
-
-
 
 
                 for filtering in suppe.find_all("a", class_="page"):
