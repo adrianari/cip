@@ -13,9 +13,28 @@ class Product():
         #self.konprice = konprice #konkurrenzprice
 
 class ProductFetcher():
+
     def fetch(self):
         url = "https://www.ottos.ch/de/parfum/damenparfum.html"
 
+
+        def catsmaker(tester):
+            cats = ["Bodylotion", "Bodyspray", "Eau de Cologne", "Eau de Parfum", "Eau de Toilette", "Geschenkset", "Bodymist", "Eau Frâiche", "Eau Fraîche", "Spray", "Körperspray", "EdP"]
+            for cat in cats:
+                if cat in tester:
+                    kategorie = cat
+                    print(kategorie)
+                else:
+                    continue
+            if kategorie == "EdP":
+                kategorie = "Eau de Parfum"
+            if kategorie == "Körperspray" and "Spray":
+                kategorie = "Bodyspray"
+            if kategorie == "Eau Frâiche":
+                kategorie = "Eau Fraîche"
+
+
+            return kategorie
 
 
         articles = []
@@ -26,18 +45,11 @@ class ProductFetcher():
 
 
         for element in soup.find_all("div", attrs={"class":"product-item-info per-product category-products-grid"}):
+
             description = element.select_one("h2").text
             name = description[:-6]
             print(name)
-
-            #kategoriebestimmung
-            cats = ["Bodylotion", "Bodyspray", "Eau de Cologne", "Eau de Parfum", "Eau de Toilette", "Geschenkset", "Bodymist"]
-            for cat in cats:
-                if cat in name:
-                    kategorie = cat
-                    print(kategorie)
-                else:
-                    continue
+            kategorie = catsmaker(name)
             size_ml = description[-6:-2]
             if size_ml[0] == " ":
                 size_ml = description[-5:-2]
@@ -75,16 +87,7 @@ class ProductFetcher():
                 description = element.select_one("h2").text
                 name = description[:-6]
                 print(name)
-
-                #kategoriebestimmung
-                cats = ["Bodylotion", "Bodyspray", "Eau de Cologne", "Eau de Parfum", "Eau de Toilette", "Geschenkset", "Bodymist"]
-                for cat in cats:
-                    if cat in name:
-                        kategorie = cat
-                        print(kategorie)
-                    else:
-                        continue
-
+                kategorie = catsmaker(name)
                 size_ml = description[-6:-2]
                 if size_ml[0] == " ":
                     size_ml = description[-5:-2]
@@ -120,7 +123,7 @@ class ProductFetcher():
 fetcher = ProductFetcher()
 articles = fetcher.fetch()
 
-with open( 'ottos.csv', 'w', newline='', encoding= "utf-8" ) as csvfile:
+with open( 'testingtest.csv', 'w', newline='', encoding= "utf-8" ) as csvfile:
     blogwriter = csv.writer(csvfile, delimiter=';', quotechar='"', quoting=csv.QUOTE_MINIMAL)
 
     for article in fetcher.fetch():
