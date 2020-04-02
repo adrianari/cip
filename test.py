@@ -4,78 +4,124 @@ from urllib.parse import urljoin
 import time
 import csv
 
-
 class Product():
-    def __init__(self, title, brand_line, price, base_price): #, image):
-        self.title = title
-        self.brand_line = brand_line
+    def __init__(self, name, kategorie, size_ml, price):
+        self.name = name
+        self.kategorie = kategorie
+        self.size = size_ml
         self.price = price
-        self.base_price = base_price
-        #self.image = image
-
+        #self.konprice = konprice #konkurrenzprice
 
 class ProductFetcher():
+
     def fetch(self):
-        url = "https://www.douglas.ch/de/c/parfum/damenduefte/damenparfum/010106?page=1"
+        url = "https://www.ottos.ch/de/parfum/damenparfum.html"
+
+        def namer(bubble):
+            name = bubble[:-6]
+            return name
+
+        def catsmaker(tester):
+            cats = ["Bodylotion", "Bodyspray", "Eau de Cologne", "Eau de Parfum", "Eau de Toilette", "Geschenkset", "Bodymist", "Eau Frâiche", "Eau Fraîche", "Spray", "Körperspray", "EdP"]
+            for cat in cats:
+                if cat in tester:
+                    kategorie = cat
+                else:
+                    continue
+            if kategorie == "EdP":
+                kategorie = "Eau de Parfum"
+            if kategorie == "Körperspray" and "Spray":
+                kategorie = "Bodyspray"
+            if kategorie == "Eau Frâiche":
+                kategorie = "Eau Fraîche"
+
+
+            return kategorie
+
+        def sizer(data):
+            size_ml = data[-6:-2]
+            if size_ml[0] == " ":
+                size_ml = data[-5:-2]
+            return size_ml
+
+        def beautify(naming):
+            cats = ["Bodylotion", "Bodyspray", "Eau de Cologne", "Eau de Parfum", "Eau de Toilette", "Geschenkset", "Bodymist", "Eau Frâiche", "Eau Fraîche", "Spray", "Körperspray", "EdP"]
+            for cat in cats:
+                if cat in naming:
+                    name = naming.replace(cat, "")
+            return name
+
+        def crawling(element):
+            description = element.select_one("h2").text
+            naming = namer(description)
+            kategorie = catsmaker(naming)
+            name = beautify(naming)
+            size_ml = sizer(description)
+            for thing in element.find_all("span"):
+                daten = thing.get("data-price-amount")
+                if daten != None:
+                    price = daten
+                else:
+                    continue
+
+            crawled = Product(name, kategorie, size_ml, price)
+            articles.append(crawled)
+
+
+
 
         articles = []
         time.sleep(1)
         r = requests.get(url)
-        doc = BeautifulSoup(r.text, "html.parser")
+        soup = BeautifulSoup(r.text, "html.parser")
 
-        for product in doc.select(".product-tile"):
-            title = product.select_one(".product-tile__top-brand").text
-            brand_line = product.select_one(".product-tile__brand-line").text
-            category = product.select_one(".product-tile__category").text
-            price = product.select_one(".product-price__no-discount")
-            if price:
-                price = price.text
-            base_price = product.select_one(".product-price__base-price").text
-            #image = product.select_one("img").attrs["src"]
+        for element in soup.find_all("div", attrs={"class":"product-item-info per-product category-products-grid"}):
+            crawling(element)
 
+        #Seiten
+        pages = []
+        for filtering in soup.find_all("a", class_="page"):
+            seite = filtering.get("href")
+            if seite in pages:
+                continue
+            else:
+                pages.append(seite)
 
-            crawled = Product(title, brand_line, price, base_price) #, image)
-            articles.append(crawled)
-
-        homepages = []
-        for x in doc.find_all("a", class_ = "link link--no-decoration pagination-title__option-link active"):
-            homepages.append(x.get("href"))
-
-        ################ Seite 2 bis Ende
-
-
-        for thing in homepages:
-            nextone = urljoin("https://www.douglas.ch/", str(thing))
-            print(nextone)
-
+        for thing in pages:
+            nextone = urljoin("https://www.ottos.ch/", str(thing))
             link_two = requests.get(nextone)
             suppe = BeautifulSoup(link_two.text, "html.parser")
 
+            for element in suppe.find_all("div", attrs={"class":"product-item-info per-product category-products-grid"}):
+                crawling(element)
 
-            for product in suppe.select(".product-tile"):
-                title = product.select_one(".product-tile__top-brand").text
-                brand_line = product.select_one(".product-tile__brand-line").text
-                #category = product.select_one(".product-tile__category").text
-                price = product.select_one(".product-price__no-discount")
-                if price:
-                    price = price.text
-                base_price = product.select_one(".product-price__base-price").text
-                #image = product.select_one("img").attrs["src"]
+                for filtering in suppe.find_all("a", class_="page"):
+                    seite = filtering.get("href")
+                    if seite in pages:
+                        continue
+                    else:
+                        pages.append(seite)
 
 
-                crawled = Product(title, brand_line, price, base_price) #, image)
-                articles.append(crawled)
-
+        print(pages)
         return articles
 
 
-#for article in articles:
-#    print(article.title)
+
+
 fetcher = ProductFetcher()
 #articles = fetcher.fetch()
 
-with open( 'douglas.ch.csv', 'w', newline='', encoding= "utf-8" ) as csvfile:
+with open('testertest.csv', 'w', newline='', encoding="utf-8") as csvfile:
     blogwriter = csv.writer(csvfile, delimiter=';', quotechar='"', quoting=csv.QUOTE_MINIMAL)
 
     for article in fetcher.fetch():
-        blogwriter.writerow( [article.title, article.brand_line, article.price, article.base_price] )
+        blogwriter.writerow( [article.name, article.kategorie, article.size, article.price] )
+
+
+
+    # for ding in element.select("div", class_ = ("price-box price-final_price fl-product-price")):
+    #     print(ding)
+
+
+

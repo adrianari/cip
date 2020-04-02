@@ -44,18 +44,18 @@ class ProductFetcher():
                 size_ml = data[-5:-2]
             return size_ml
 
+        def beautify(naming):
+            cats = ["Bodylotion", "Bodyspray", "Eau de Cologne", "Eau de Parfum", "Eau de Toilette", "Geschenkset", "Bodymist", "Eau Frâiche", "Eau Fraîche", "Spray", "Körperspray", "EdP"]
+            for cat in cats:
+                if cat in naming:
+                    name = naming.replace(cat, "")
+            return name
 
-        articles = []
-        time.sleep(1)
-        r = requests.get(url)
-        soup = BeautifulSoup(r.text, "html.parser")
-
-
-        for element in soup.find_all("div", attrs={"class":"product-item-info per-product category-products-grid"}):
-
+        def crawling(element):
             description = element.select_one("h2").text
-            name = namer(description)
-            kategorie = catsmaker(name)
+            naming = namer(description)
+            kategorie = catsmaker(naming)
+            name = beautify(naming)
             size_ml = sizer(description)
             for thing in element.find_all("span"):
                 daten = thing.get("data-price-amount")
@@ -67,6 +67,17 @@ class ProductFetcher():
             crawled = Product(name, kategorie, size_ml, price)
             articles.append(crawled)
 
+
+
+
+        articles = []
+        time.sleep(1)
+        r = requests.get(url)
+        soup = BeautifulSoup(r.text, "html.parser")
+
+        for element in soup.find_all("div", attrs={"class":"product-item-info per-product category-products-grid"}):
+            crawling(element)
+
         #Seiten
         pages = []
         for filtering in soup.find_all("a", class_="page"):
@@ -76,30 +87,13 @@ class ProductFetcher():
             else:
                 pages.append(seite)
 
-
-
-
         for thing in pages:
             nextone = urljoin("https://www.ottos.ch/", str(thing))
             link_two = requests.get(nextone)
             suppe = BeautifulSoup(link_two.text, "html.parser")
 
-
             for element in suppe.find_all("div", attrs={"class":"product-item-info per-product category-products-grid"}):
-                description = element.select_one("h2").text
-                name = namer(description)
-                kategorie = catsmaker(name)
-                size_ml = sizer(description)
-                for thing in element.find_all("span"):
-                    daten = thing.get("data-price-amount")
-                    if daten != None:
-                        price = daten
-                    else:
-                        continue
-
-                    crawled = Product(name, kategorie, size_ml, price)
-                    articles.append(crawled)
-
+                crawling(element)
 
                 for filtering in suppe.find_all("a", class_="page"):
                     seite = filtering.get("href")
@@ -118,7 +112,7 @@ class ProductFetcher():
 fetcher = ProductFetcher()
 #articles = fetcher.fetch()
 
-with open( 'ottos.csv', 'w', newline='', encoding= "utf-8" ) as csvfile:
+with open('testertest.csv', 'w', newline='', encoding="utf-8") as csvfile:
     blogwriter = csv.writer(csvfile, delimiter=';', quotechar='"', quoting=csv.QUOTE_MINIMAL)
 
     for article in fetcher.fetch():
