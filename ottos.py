@@ -68,8 +68,6 @@ class ProductFetcher():
             articles.append(crawled)
 
 
-
-
         articles = []
         time.sleep(1)
         r = requests.get(url)
@@ -107,21 +105,14 @@ class ProductFetcher():
         return articles
 
 
-
-
 fetcher = ProductFetcher()
 #articles = fetcher.fetch()
 
-with open('testertest.csv', 'w', newline='', encoding="utf-8") as csvfile:
+with open('ottos.csv', 'w', newline='', encoding="utf-8") as csvfile:
     blogwriter = csv.writer(csvfile, delimiter=';', quotechar='"', quoting=csv.QUOTE_MINIMAL)
 
     for article in fetcher.fetch():
         blogwriter.writerow( [article.name, article.kategorie, article.size, article.price] )
-
-
-
-    # for ding in element.select("div", class_ = ("price-box price-final_price fl-product-price")):
-    #     print(ding)
 
 
 
