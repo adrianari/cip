@@ -85,7 +85,6 @@ class ProductFetcher():
             name = beautify(naming)
             brand = brander(name)
             title = finalizing(name)
-            print(title)
             size_ml = sizer(description)
             for thing in element.find_all("span"):
                 daten = thing.get("data-price-amount")
@@ -137,6 +136,10 @@ fetcher = ProductFetcher()
 
 with open('ottos.csv', 'w', newline='', encoding="utf-8") as csvfile:
     blogwriter = csv.writer(csvfile, delimiter=';', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+    blogwriter.writerow(["Title", "Brand", "Kategorie", "Size in ml", "Price"])
+
+
+
 
     for article in fetcher.fetch():
         blogwriter.writerow( [article.title, article.brand, article.kategorie, article.size, article.price] )
