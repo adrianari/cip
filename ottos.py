@@ -45,6 +45,8 @@ class ProductFetcher():
                 size_ml = data[-5:-2]
             if "x" in size_ml:
                 size_ml = 16
+            elif "m" in size_ml:
+                size_ml = 100
             return size_ml
 
         def beautify(naming):
