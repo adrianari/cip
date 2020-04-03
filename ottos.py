@@ -5,13 +5,12 @@ import time
 import csv
 
 class Product():
-    def __init__(self, name, brand, kategorie, size_ml, price):
-        self.name = name
+    def __init__(self, title, brand, kategorie, size_ml, price):
+        self.title = title
         self.brand = brand
         self.kategorie = kategorie
         self.size = size_ml
         self.price = price
-        #self.konprice = konprice #konkurrenzprice
 
 class ProductFetcher():
 
@@ -54,14 +53,28 @@ class ProductFetcher():
             return name
 
         def brander(name):
-            marken = ["Abercrombie & Fitch", "Arden", "Beyonce", "Biotherm", "Blue Up", "Britney Spears", "Bruno Banani", "Bulgari", "Burberry", "Cabochard", "Cabotine", "Cacharel", "Calvin Klein", "Carolina Herrera", "Cartier", "Cerruti", "Chloé", "Chopard", "Christina Aguilera", "Clean", "Clinique", "Coach", "Davidoff", "Diesel", "Dior", "DKNY", "Dolce & Gabbana", "Emporio Armani", "Escada", "Estée Lauder", "Gaultier", "Giorgio", "Grês", "Gucci", "Guerlain", "Guess", "Hermès", "Hollister", "Hugo Boss", "Issey Miyake", "James Bond", "Jean Patou", "Jean Paul Gaultier", "Jil Sander", "Jimmy Choo", "J.Lo", "JOOP!", "Juicy Couture", "Karl Lagerfeld", "Katy Perry", "Kenzo", "Lacoste", "Lady Gaga", "Lancôme", "Lanvin", "Laura Biagiotti", "Mexx", "Michael Kors", "Missoni", "Moschino", "Musk", "Naomi Campbell", "Narciso Rodriguez", "Nina Ricci", "Paco Rabanne", "Pepe Jeans London", "Prada", "Rainbow", "Ralph Lauren", "Rihanna", "Roberto Cavalli", "Sisley", "Slava Zaitsev", "s.Oliver", "Thierry Mugler", "Grês", "Tiffany", "Tommy Girl", "Vera Wang", "Versace", "Victoria's Secret", "Yves Saint Laurent", "Zadig & Voltaire", "Revlon", "Sabatini", "Gloria Vanderbilt", "S. Oliver"]
+            global marken
+            marken = ["Abercrombie & Fitch", "Arden", "Beyonce", "Biotherm", "Blue Up", "Britney Spears", "Bruno Banani", "Bulgari", "Burberry", "Cabochard", "Cabotine", "Cacharel", "Calvin Klein", "Carolina Herrera", "Cartier", "Cerruti", "Chloé", "Chopard", "Christina Aguilera", "Clean", "Clinique", "Coach", "Davidoff", "Diesel", "Dior", "DKNY", "Dolce & Gabbana", "Emporio Armani", "Escada", "Estée Lauder", "Gaultier", "Giorgio", "Grês", "Gucci", "Guerlain", "Guess", "Hermès", "Hollister", "Hugo Boss", "Issey Miyake", "James Bond", "Jean Patou", "Jean Paul Gaultier", "Jil Sander", "Jimmy Choo", "J.Lo", "JOOP!", "Juicy Couture", "Karl Lagerfeld", "Katy Perry", "Kenzo", "Lacoste", "Lady Gaga", "Lancôme", "Lanvin", "Laura Biagiotti", "Mexx", "Michael Kors", "Missoni", "Moschino", "Musk", "Naomi Campbell", "Narciso Rodriguez", "Nina Ricci", "Paco Rabanne", "Pepe Jeans London", "Prada", "Rainbow", "Ralph Lauren", "Rihanna", "Roberto Cavalli", "Sisley", "Slava Zaitsev", "s.Oliver", "Thierry Mugler", "Grês", "Tiffany", "Tommy Girl", "Vera Wang", "Versace", "Victoria's Secret", "Yves Saint Laurent", "Zadig & Voltaire", "Revlon", "Gabriella Sabatini", "Gloria Vanderbilt", "S. Oliver"]
+            global korrektur
+            korrektur = {"Giorgio": "Giorgio Armani", "Arden" : "Elizabeth Arden", "Arden Elizabeth" : "Elizabeth Arden", "Gaultier" : "Jean Paul Gaultier", "S. Oliver" : "s.Oliver"}
             for marke in marken:
                 if marke in name:
                     brand = marke
+                    if brand in korrektur:
+                        brand = korrektur.get(brand)
                 else:
                     continue
                 return brand
 
+        def finalizing(name):
+            for marke in marken:
+                if marke in name:
+                    if marke in korrektur:
+                        marke = korrektur.get(marke)
+                    title = name.replace(marke, "")
+                else:
+                    continue
+                return title
 
         def crawling(element):
             description = element.select_one("h2").text
@@ -69,6 +82,8 @@ class ProductFetcher():
             kategorie = catsmaker(naming)
             name = beautify(naming)
             brand = brander(name)
+            title = finalizing(name)
+            print(title)
             size_ml = sizer(description)
             for thing in element.find_all("span"):
                 daten = thing.get("data-price-amount")
@@ -77,11 +92,8 @@ class ProductFetcher():
                 else:
                     continue
 
-            crawled = Product(name, brand, kategorie, size_ml, price)
+            crawled = Product(title, brand, kategorie, size_ml, price)
             articles.append(crawled)
-
-
-
 
         articles = []
         time.sleep(1)
@@ -115,12 +127,8 @@ class ProductFetcher():
                     else:
                         pages.append(seite)
 
-
         print(pages)
         return articles
-
-
-
 
 fetcher = ProductFetcher()
 #articles = fetcher.fetch()
@@ -129,12 +137,4 @@ with open('ottos.csv', 'w', newline='', encoding="utf-8") as csvfile:
     blogwriter = csv.writer(csvfile, delimiter=';', quotechar='"', quoting=csv.QUOTE_MINIMAL)
 
     for article in fetcher.fetch():
-        blogwriter.writerow( [article.name, article.brand, article.kategorie, article.size, article.price] )
-
-
-
-    # for ding in element.select("div", class_ = ("price-box price-final_price fl-product-price")):
-    #     print(ding)
-
-
-
+        blogwriter.writerow( [article.title, article.brand, article.kategorie, article.size, article.price] )
