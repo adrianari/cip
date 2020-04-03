@@ -43,7 +43,9 @@ class ProductFetcher():
             size_ml = data[-6:-2]
             if size_ml[0] == " ":
                 size_ml = data[-5:-2]
-            return size_ml.strip()
+            if "x" in size_ml:
+                size_ml = 16
+            return size_ml
 
         def beautify(naming):
             cats = ["Bodylotion", "Bodyspray", "Eau de Cologne", "Eau de Parfum", "Eau de Toilette", "Geschenkset", "Bodymist", "Eau Frâiche", "Eau Fraîche", "Spray", "Körperspray", "EdP"]
@@ -136,7 +138,7 @@ fetcher = ProductFetcher()
 
 with open('ottos.csv', 'w', newline='', encoding="utf-8") as csvfile:
     blogwriter = csv.writer(csvfile, delimiter=';', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-    blogwriter.writerow(["Title", "Brand", "Kategorie", "Size in ml", "Price"])
+
 
 
 

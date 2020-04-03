@@ -2,6 +2,18 @@ import pandas as pd
 import csv
 
 
+def calculator(df):
+
+    data = pd.read_csv(df, sep=";")
+    df = pd.DataFrame(data, columns=["Title", "Brand", "Kategorie", "ml", "Preis"])
+    spalte = []
+
+    for line in df:
+        df["Preis"] = pd.to_numeric(df["Preis"])
+        df["ml"] = pd.to_numeric(df["ml"])
+        df["Preis pro 100 ml"] = df["Preis"] / df["ml"] * 100
+
+    print(spalte)
 
 
 
@@ -14,7 +26,5 @@ import csv
 
 
 
-with open ("ottos.csv") as x:
-    df = pd.read_csv(x, header=None)
-
-print(df[df.columns[3:5]])
+with open ("ottos.csv") as df:
+    calculator(df)
