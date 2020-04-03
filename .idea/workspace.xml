@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2bf6d8f3-a497-4ccf-9bd8-10c5ff5bf671" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ottos.csv" beforeDir="false" afterPath="$PROJECT_DIR$/ottos.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ottos.py" beforeDir="false" afterPath="$PROJECT_DIR$/ottos.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -43,7 +41,7 @@
       <recent name="https://github.com/kaetze66/coronamodel" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.ottos">
+  <component name="RunManager" selected="Python.last test">
     <configuration name="anothertest" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="cip" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -58,6 +56,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/anothertest.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="last test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="cip" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/last test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -132,35 +152,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="we_do_a_panda" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="cip" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="D:\home\adriana\__python at hslu\cip\we_do_a_panda.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.ottos" />
+        <item itemvalue="Python.last test" />
         <item itemvalue="Python.test" />
+        <item itemvalue="Python.ottos" />
         <item itemvalue="Python.anothertest" />
         <item itemvalue="Python.we_do_a_panda (1)" />
-        <item itemvalue="Python.we_do_a_panda" />
       </list>
     </recent_temporary>
   </component>
@@ -203,7 +201,7 @@
       <workItem from="1585680927094" duration="8187000" />
       <workItem from="1585689744400" duration="834000" />
       <workItem from="1585721440841" duration="2668000" />
-      <workItem from="1585829337004" duration="15020000" />
+      <workItem from="1585829337004" duration="17370000" />
     </task>
     <task id="LOCAL-00001" summary="Establishing the files">
       <created>1584824866455</created>
@@ -359,7 +357,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585838342126</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="more functions">
+      <created>1585909530155</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1585909530155</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -415,10 +420,10 @@
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="481" y="231" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1500.960@0.0.1500.960" timestamp="1585829425564" />
-    <state x="385" y="80" key="CommitChangelistDialog2" timestamp="1585838341592">
+    <state x="385" y="80" key="CommitChangelistDialog2" timestamp="1585909529418">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state x="385" y="80" key="CommitChangelistDialog2/0.0.1500.960@0.0.1500.960" timestamp="1585838341592" />
+    <state x="385" y="80" key="CommitChangelistDialog2/0.0.1500.960@0.0.1500.960" timestamp="1585909529418" />
     <state x="93" y="93" width="1313" height="773" key="DiffContextDialog" timestamp="1585688933326">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
@@ -427,22 +432,22 @@
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="531" y="239" key="FileChooserDialogImpl/0.0.1500.960@0.0.1500.960" timestamp="1585383295474" />
-    <state width="1458" height="220" key="GridCell.Tab.0.bottom" timestamp="1585909367411">
+    <state width="1458" height="220" key="GridCell.Tab.0.bottom" timestamp="1585915054797">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1458" height="220" key="GridCell.Tab.0.bottom/0.0.1500.960@0.0.1500.960" timestamp="1585909367411" />
-    <state width="1458" height="220" key="GridCell.Tab.0.center" timestamp="1585909367411">
+    <state width="1458" height="220" key="GridCell.Tab.0.bottom/0.0.1500.960@0.0.1500.960" timestamp="1585915054797" />
+    <state width="1458" height="220" key="GridCell.Tab.0.center" timestamp="1585915054797">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1458" height="220" key="GridCell.Tab.0.center/0.0.1500.960@0.0.1500.960" timestamp="1585909367411" />
-    <state width="1458" height="220" key="GridCell.Tab.0.left" timestamp="1585909367411">
+    <state width="1458" height="220" key="GridCell.Tab.0.center/0.0.1500.960@0.0.1500.960" timestamp="1585915054797" />
+    <state width="1458" height="220" key="GridCell.Tab.0.left" timestamp="1585915054797">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1458" height="220" key="GridCell.Tab.0.left/0.0.1500.960@0.0.1500.960" timestamp="1585909367411" />
-    <state width="1458" height="220" key="GridCell.Tab.0.right" timestamp="1585909367411">
+    <state width="1458" height="220" key="GridCell.Tab.0.left/0.0.1500.960@0.0.1500.960" timestamp="1585915054797" />
+    <state width="1458" height="220" key="GridCell.Tab.0.right" timestamp="1585915054797">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1458" height="220" key="GridCell.Tab.0.right/0.0.1500.960@0.0.1500.960" timestamp="1585909367411" />
+    <state width="1458" height="220" key="GridCell.Tab.0.right/0.0.1500.960@0.0.1500.960" timestamp="1585915054797" />
     <state x="254" y="126" key="SettingsEditor" timestamp="1585830774363">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
@@ -473,17 +478,18 @@
     <state x="423" y="211" width="672" height="678" key="search.everywhere.popup/0.0.1500.960@0.0.1500.960" timestamp="1585843904863" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/cip$Crawler_Aufgabe_Adriana_Ricklin.coverage" NAME="Crawler_Aufgabe_Adriana_Ricklin Coverage Results" MODIFIED="1584907277658" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../untitled/Block04" />
-    <SUITE FILE_PATH="coverage/cip$finaltest.coverage" NAME="finaltest Coverage Results" MODIFIED="1585480076214" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/cip$last_test.coverage" NAME="last test Coverage Results" MODIFIED="1585915054789" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/cip$anderertest.coverage" NAME="anderertest Coverage Results" MODIFIED="1584914917876" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/cip$anothertest.coverage" NAME="anothertest Coverage Results" MODIFIED="1585842497530" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/cip$test.coverage" NAME="test Coverage Results" MODIFIED="1585844534557" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/cip$test_import_parfumerie.coverage" NAME="test_import_parfumerie Coverage Results" MODIFIED="1585089365794" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/cip$pandas.coverage" NAME="pandas Coverage Results" MODIFIED="1585830861052" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/cip$test2.coverage" NAME="test2 Coverage Results" MODIFIED="1585243394725" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/cip$we_do_a_panda__1_.coverage" NAME="we_do_a_panda (1) Coverage Results" MODIFIED="1585830942612" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/cip$ottos.coverage" NAME="ottos Coverage Results" MODIFIED="1585909367387" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/cip$douglas_ch.coverage" NAME="douglas_ch Coverage Results" MODIFIED="1585001178954" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/cip$douglas_de.coverage" NAME="douglas_de Coverage Results" MODIFIED="1584984054578" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/cip$Crawler_Aufgabe_Adriana_Ricklin.coverage" NAME="Crawler_Aufgabe_Adriana_Ricklin Coverage Results" MODIFIED="1584907277658" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../untitled/Block04" />
+    <SUITE FILE_PATH="coverage/cip$finaltest.coverage" NAME="finaltest Coverage Results" MODIFIED="1585480076214" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/cip$anothertest.coverage" NAME="anothertest Coverage Results" MODIFIED="1585842497530" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/cip$test.coverage" NAME="test Coverage Results" MODIFIED="1585914676055" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/cip$test_import_parfumerie.coverage" NAME="test_import_parfumerie Coverage Results" MODIFIED="1585089365794" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/cip$test2.coverage" NAME="test2 Coverage Results" MODIFIED="1585243394725" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/cip$douglas_ch.coverage" NAME="douglas_ch Coverage Results" MODIFIED="1585001178954" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
