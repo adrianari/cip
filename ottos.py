@@ -37,13 +37,13 @@ class ProductFetcher():
                 kategorie = "Eau Fraîche"
 
 
-            return kategorie
+            return kategorie.strip()
 
         def sizer(data):
             size_ml = data[-6:-2]
             if size_ml[0] == " ":
                 size_ml = data[-5:-2]
-            return size_ml
+            return size_ml.strip()
 
         def beautify(naming):
             cats = ["Bodylotion", "Bodyspray", "Eau de Cologne", "Eau de Parfum", "Eau de Toilette", "Geschenkset", "Bodymist", "Eau Frâiche", "Eau Fraîche", "Spray", "Körperspray", "EdP"]
@@ -60,23 +60,23 @@ class ProductFetcher():
             for marke in marken:
                 if marke in name:
                     brand = marke
-                    if brand in korrektur:
-                        brand = korrektur.get(brand)
+                    if marke in korrektur:
+                        brand = korrektur.get(marke)
                 else:
                     continue
-                return brand
+                return brand.strip()
 
         def finalizing(name):
             for marke in marken:
                 if marke in name:
                     if marke in korrektur:
-                        marke = korrektur.get(marke)
+                        marke = korrektur[marke]
                     title = name.replace(marke, "")
                     if title == "" and " " and "\n":
                         title = marke
                 else:
                     continue
-                return title
+                return title.strip()
 
         def crawling(element):
             description = element.select_one("h2").text
@@ -90,7 +90,7 @@ class ProductFetcher():
             for thing in element.find_all("span"):
                 daten = thing.get("data-price-amount")
                 if daten != None:
-                    price = daten
+                    price = daten.strip()
                 else:
                     continue
 
