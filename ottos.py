@@ -54,9 +54,9 @@ class ProductFetcher():
 
         def brander(name):
             global marken
-            marken = ["Abercrombie & Fitch", "Arden", "Beyonce", "Biotherm", "Blue Up", "Britney Spears", "Bruno Banani", "Bulgari", "Burberry", "Cabochard", "Cabotine", "Cacharel", "Calvin Klein", "Carolina Herrera", "Cartier", "Cerruti", "Chloé", "Chopard", "Christina Aguilera", "Clean", "Clinique", "Coach", "Davidoff", "Diesel", "Dior", "DKNY", "Dolce & Gabbana", "Emporio Armani", "Escada", "Estée Lauder", "Gaultier", "Giorgio", "Grês", "Gucci", "Guerlain", "Guess", "Hermès", "Hollister", "Hugo Boss", "Issey Miyake", "James Bond", "Jean Patou", "Jean Paul Gaultier", "Jil Sander", "Jimmy Choo", "J.Lo", "JOOP!", "Juicy Couture", "Karl Lagerfeld", "Katy Perry", "Kenzo", "Lacoste", "Lady Gaga", "Lancôme", "Lanvin", "Laura Biagiotti", "Mexx", "Michael Kors", "Missoni", "Moschino", "Musk", "Naomi Campbell", "Narciso Rodriguez", "Nina Ricci", "Paco Rabanne", "Pepe Jeans London", "Prada", "Rainbow", "Ralph Lauren", "Rihanna", "Roberto Cavalli", "Sisley", "Slava Zaitsev", "s.Oliver", "Thierry Mugler", "Grês", "Tiffany", "Tommy Girl", "Vera Wang", "Versace", "Victoria's Secret", "Yves Saint Laurent", "Zadig & Voltaire", "Revlon", "Gabriella Sabatini", "Gloria Vanderbilt", "S. Oliver"]
+            marken = ["Abercrombie & Fitch", "Arden", "Beyonce", "Biotherm", "Blue Up", "Britney Spears", "Bruno Banani", "Bulgari", "Burberry", "Cabochard", "Cabotine", "Cacharel", "Calvin Klein", "Carolina Herrera", "Cartier", "Cerruti", "Chloé", "Chopard", "Christina Aguilera", "Clean", "Clinique", "Coach", "Davidoff", "Diesel", "Dior", "DKNY", "Dolce & Gabbana", "Emporio Armani", "Escada", "Estée Lauder", "Gaultier", "Giorgio", "Grês", "Gucci", "Guerlain", "Guess", "Hermès", "Hollister", "Hugo Boss", "Issey Miyake", "James Bond", "Jean Patou", "Jean Paul Gaultier", "Jil Sander", "Jimmy Choo", "J.Lo", "JOOP!", "Juicy Couture", "Karl Lagerfeld", "Katy Perry", "Kenzo", "Lacoste", "Lady Gaga", "Lancôme", "Lanvin", "Laura Biagiotti", "Mexx", "Michael Kors", "Missoni", "Moschino", "Musk", "Naomi Campbell", "Narciso Rodriguez", "Nina Ricci", "Paco Rabanne", "Pepe Jeans London", "Prada", "Rainbow", "Ralph Lauren", "Rihanna", "Roberto Cavalli", "Sisley", "Slava Zaitsev", "s.Oliver", "Thierry Mugler", "Grès", "Tiffany", "Tommy Girl", "Vera Wang", "Versace", "Victoria's Secret", "Yves Saint Laurent", "Zadig & Voltaire", "Revlon", "Gabriella Sabatini", "Gloria Vanderbilt", "S. Oliver", "Gabriela Sabatini"]
             global korrektur
-            korrektur = {"Giorgio": "Giorgio Armani", "Arden" : "Elizabeth Arden", "Arden Elizabeth" : "Elizabeth Arden", "Gaultier" : "Jean Paul Gaultier", "S. Oliver" : "s.Oliver"}
+            korrektur = {"Gabriella Sabatini": "Gabriela Sabatini", "Giorgio": "Giorgio Armani", "Arden" : "Elizabeth Arden", "Arden Elizabeth" : "Elizabeth Arden", "Gaultier" : "Jean Paul Gaultier", "S. Oliver" : "s.Oliver"}
             for marke in marken:
                 if marke in name:
                     brand = marke
@@ -72,6 +72,8 @@ class ProductFetcher():
                     if marke in korrektur:
                         marke = korrektur.get(marke)
                     title = name.replace(marke, "")
+                    if title == "" and " " and "\n":
+                        title = marke
                 else:
                     continue
                 return title
