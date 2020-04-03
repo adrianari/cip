@@ -13,8 +13,7 @@ def calculator(data):
     df["Preis pro 100 ml"] = df["Preis"] / df["ml"] * 100
 
     print(df)
-
-    df.to_csv("ottos_meets_panda.csv", index=False)
+    df.to_csv("ottos_meets_panda.csv", index=False, header = True, sep=";")
 
 
 with open ("ottos.csv") as df:

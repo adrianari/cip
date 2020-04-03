@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2bf6d8f3-a497-4ccf-9bd8-10c5ff5bf671" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ottos.csv" beforeDir="false" afterPath="$PROJECT_DIR$/ottos.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ottos.py" beforeDir="false" afterPath="$PROJECT_DIR$/ottos.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/we_do_a_panda.py" beforeDir="false" afterPath="$PROJECT_DIR$/we_do_a_panda.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -33,6 +31,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -204,7 +203,7 @@
       <workItem from="1585689744400" duration="834000" />
       <workItem from="1585721440841" duration="2668000" />
       <workItem from="1585829337004" duration="25559000" />
-      <workItem from="1585925465091" duration="915000" />
+      <workItem from="1585925465091" duration="1459000" />
     </task>
     <task id="LOCAL-00001" summary="Establishing the files">
       <created>1584824866455</created>
@@ -430,7 +429,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585925223624</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="pandas complete">
+      <created>1585926510265</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1585926510265</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -480,7 +486,8 @@
     <MESSAGE value="with header in csv" />
     <MESSAGE value="Fehlerkorrektur für 4x4 Lancome Miniset" />
     <MESSAGE value="pandas" />
-    <option name="LAST_COMMIT_MESSAGE" value="pandas" />
+    <MESSAGE value="pandas complete" />
+    <option name="LAST_COMMIT_MESSAGE" value="pandas complete" />
   </component>
   <component name="WindowStateProjectService">
     <state x="206" y="139" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584824715294">
@@ -491,10 +498,10 @@
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="481" y="231" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1500.960@0.0.1500.960" timestamp="1585829425564" />
-    <state x="385" y="80" key="CommitChangelistDialog2" timestamp="1585925222864">
+    <state x="385" y="80" key="CommitChangelistDialog2" timestamp="1585926509407">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state x="385" y="80" key="CommitChangelistDialog2/0.0.1500.960@0.0.1500.960" timestamp="1585925222864" />
+    <state x="385" y="80" key="CommitChangelistDialog2/0.0.1500.960@0.0.1500.960" timestamp="1585926509407" />
     <state x="93" y="93" width="1313" height="773" key="DiffContextDialog" timestamp="1585688933326">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
@@ -503,22 +510,22 @@
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="531" y="239" key="FileChooserDialogImpl/0.0.1500.960@0.0.1500.960" timestamp="1585383295474" />
-    <state width="1458" height="220" key="GridCell.Tab.0.bottom" timestamp="1585926481865">
+    <state width="1458" height="220" key="GridCell.Tab.0.bottom" timestamp="1585926928385">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1458" height="220" key="GridCell.Tab.0.bottom/0.0.1500.960@0.0.1500.960" timestamp="1585926481865" />
-    <state width="1458" height="220" key="GridCell.Tab.0.center" timestamp="1585926481865">
+    <state width="1458" height="220" key="GridCell.Tab.0.bottom/0.0.1500.960@0.0.1500.960" timestamp="1585926928385" />
+    <state width="1458" height="220" key="GridCell.Tab.0.center" timestamp="1585926928384">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1458" height="220" key="GridCell.Tab.0.center/0.0.1500.960@0.0.1500.960" timestamp="1585926481865" />
-    <state width="1458" height="220" key="GridCell.Tab.0.left" timestamp="1585926481865">
+    <state width="1458" height="220" key="GridCell.Tab.0.center/0.0.1500.960@0.0.1500.960" timestamp="1585926928384" />
+    <state width="1458" height="220" key="GridCell.Tab.0.left" timestamp="1585926928384">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1458" height="220" key="GridCell.Tab.0.left/0.0.1500.960@0.0.1500.960" timestamp="1585926481865" />
-    <state width="1458" height="220" key="GridCell.Tab.0.right" timestamp="1585926481865">
+    <state width="1458" height="220" key="GridCell.Tab.0.left/0.0.1500.960@0.0.1500.960" timestamp="1585926928384" />
+    <state width="1458" height="220" key="GridCell.Tab.0.right" timestamp="1585926928384">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1458" height="220" key="GridCell.Tab.0.right/0.0.1500.960@0.0.1500.960" timestamp="1585926481865" />
+    <state width="1458" height="220" key="GridCell.Tab.0.right/0.0.1500.960@0.0.1500.960" timestamp="1585926928384" />
     <state x="254" y="126" key="SettingsEditor" timestamp="1585830774363">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
@@ -552,8 +559,8 @@
     <SUITE FILE_PATH="coverage/cip$last_test.coverage" NAME="last test Coverage Results" MODIFIED="1585915649159" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/cip$anderertest.coverage" NAME="anderertest Coverage Results" MODIFIED="1584914917876" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/cip$pandas.coverage" NAME="pandas Coverage Results" MODIFIED="1585830861052" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/cip$ottos.coverage" NAME="ottos Coverage Results" MODIFIED="1585926097457" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/cip$we_do_a_panda__1_.coverage" NAME="we_do_a_panda (1) Coverage Results" MODIFIED="1585926481848" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/cip$ottos.coverage" NAME="ottos Coverage Results" MODIFIED="1585926807825" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/cip$we_do_a_panda__1_.coverage" NAME="we_do_a_panda (1) Coverage Results" MODIFIED="1585926928357" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/cip$douglas_de.coverage" NAME="douglas_de Coverage Results" MODIFIED="1584984054578" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/cip$Crawler_Aufgabe_Adriana_Ricklin.coverage" NAME="Crawler_Aufgabe_Adriana_Ricklin Coverage Results" MODIFIED="1584907277658" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../untitled/Block04" />
     <SUITE FILE_PATH="coverage/cip$finaltest.coverage" NAME="finaltest Coverage Results" MODIFIED="1585480076214" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
