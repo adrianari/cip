@@ -15,7 +15,7 @@ def calculator(data):
     df["Title"].fillna("Naomi Campbell", inplace=True)
 
     #export
-    df.to_csv("ottos_meets_panda.csv", index=False, header = True, sep=";")
+    df.to_csv("ottos_meets_panda.csv", encoding="utf-8", index=False, header = True, sep=";")
 
 with open ("ottos.csv") as df:
     calculator(df)
