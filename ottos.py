@@ -76,8 +76,6 @@ class ProductFetcher():
                     if marke in korrektur:
                         marke = korrektur[marke]
                     title = name.replace(marke, "")
-                    if title == "" and " " and "\n":
-                        title = marke
                 else:
                     continue
                 return title.strip()
