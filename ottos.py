@@ -4,6 +4,7 @@ from urllib.parse import urljoin
 import time
 import csv
 
+#setting up product class
 class Product():
     def __init__(self, title, brand, kategorie, size_ml, price):
         self.title = title
@@ -18,11 +19,14 @@ class ProductFetcher():
 
         url = "https://www.ottos.ch/de/parfum/damenparfum.html"
 
+        #returns the name without the ml-indication
         def namer(bubble):
             name = bubble[:-6]
             return name
 
+        #extracts the category
         def catsmaker(tester):
+            global cats
             cats = ["Bodylotion", "Bodyspray", "Eau de Cologne", "Eau de Parfum", "Eau de Toilette", "Geschenkset", "Bodymist", "Eau Frâiche", "Eau Fraîche", "Spray", "Körperspray", "EdP"]
             for cat in cats:
                 if cat in tester:
@@ -35,10 +39,9 @@ class ProductFetcher():
                 kategorie = "Bodyspray"
             if kategorie == "Eau Frâiche":
                 kategorie = "Eau Fraîche"
-
-
             return kategorie.strip()
 
+        #extracts the size
         def sizer(data):
             size_ml = data[-6:-2]
             if size_ml[0] == " ":
@@ -49,13 +52,14 @@ class ProductFetcher():
                 size_ml = 100
             return size_ml
 
+        #replaces the category in name with ""
         def beautify(naming):
-            cats = ["Bodylotion", "Bodyspray", "Eau de Cologne", "Eau de Parfum", "Eau de Toilette", "Geschenkset", "Bodymist", "Eau Frâiche", "Eau Fraîche", "Spray", "Körperspray", "EdP"]
             for cat in cats:
                 if cat in naming:
                     name = naming.replace(cat, "")
             return name
 
+        #extracts brand
         def brander(name):
             global marken
             marken = ["Abercrombie & Fitch", "Arden", "Beyonce", "Biotherm", "Blue Up", "Britney Spears", "Bruno Banani", "Bulgari", "Burberry", "Cabochard", "Cabotine", "Cacharel", "Calvin Klein", "Carolina Herrera", "Cartier", "Cerruti", "Chloé", "Chopard", "Christina Aguilera", "Clean", "Clinique", "Coach", "Davidoff", "Diesel", "Dior", "DKNY", "Dolce & Gabbana", "Emporio Armani", "Escada", "Estée Lauder", "Gaultier", "Giorgio", "Grês", "Gucci", "Guerlain", "Guess", "Hermès", "Hollister", "Hugo Boss", "Issey Miyake", "James Bond", "Jean Patou", "Jean Paul Gaultier", "Jil Sander", "Jimmy Choo", "J.Lo", "JOOP!", "Juicy Couture", "Karl Lagerfeld", "Katy Perry", "Kenzo", "Lacoste", "Lady Gaga", "Lancôme", "Lanvin", "Laura Biagiotti", "Mexx", "Michael Kors", "Missoni", "Moschino", "Musk", "Naomi Campbell", "Narciso Rodriguez", "Nina Ricci", "Paco Rabanne", "Pepe Jeans London", "Prada", "Rainbow", "Ralph Lauren", "Rihanna", "Roberto Cavalli", "Sisley", "Slava Zaitsev", "s.Oliver", "Thierry Mugler", "Grès", "Tiffany", "Tommy Girl", "Vera Wang", "Versace", "Victoria's Secret", "Yves Saint Laurent", "Zadig & Voltaire", "Revlon", "Gabriella Sabatini", "Gloria Vanderbilt", "S. Oliver", "Gabriela Sabatini"]
@@ -70,6 +74,7 @@ class ProductFetcher():
                     continue
                 return brand.strip()
 
+        #finalizes the name --> replaces the brand in the name with ""
         def finalizing(name):
             for marke in marken:
                 if marke in name:
@@ -80,6 +85,7 @@ class ProductFetcher():
                     continue
                 return title.strip()
 
+        #extracts the information per website
         def crawling(element):
             description = element.select_one("h2").text
             naming = namer(description)
