@@ -1,163 +1,21 @@
-import requests
-from bs4 import BeautifulSoup
-from urllib.parse import urljoin
-import time
+import pandas as pd
 import csv
 
-class Product():
-    def __init__(self, title, brand, kategorie, size_ml, price):
-        self.title = title
-        self.brand = brand
-        self.kategorie = kategorie
-        self.size = size_ml
-        self.price = price
-        #self.konprice = konprice #konkurrenzprice
+data = "ottos.csv"
+#setting up dataframe
+df = pd.read_csv(data, sep=";", names = ["Title", "Brand", "Kategorie", "ml", "Preis"])
 
-class ProductFetcher():
-
-    def fetch(self):
-
-        url = "https://www.ottos.ch/de/parfum/damenparfum.html"
-
-        def namer(bubble):
-            name = bubble[:-6]
-            return name
-
-        def catsmaker(tester):
-            cats = ["Bodylotion", "Bodyspray", "Eau de Cologne", "Eau de Parfum", "Eau de Toilette", "Geschenkset", "Bodymist", "Eau Frâiche", "Eau Fraîche", "Spray", "Körperspray", "EdP"]
-            for cat in cats:
-                if cat in tester:
-                    kategorie = cat
-                else:
-                    continue
-            if kategorie == "EdP":
-                kategorie = "Eau de Parfum"
-            if kategorie == "Körperspray" and "Spray":
-                kategorie = "Bodyspray"
-            if kategorie == "Eau Frâiche":
-                kategorie = "Eau Fraîche"
+df.iloc[58] = df.iloc[58].replace(to_replace = 10, value=60)
 
 
-            return kategorie
+#Calculating price for 100ml
+df["Preis"] = pd.to_numeric(df["Preis"])
+df["ml"] = pd.to_numeric(df["ml"])
+df["Preis pro 100 ml"] = df["Preis"] / df["ml"] * 100
 
-        def sizer(data):
-            size_ml = data[-6:-2]
-            if size_ml[0] == " ":
-                size_ml = data[-5:-2]
-            return size_ml
+#filling missing values for title (only happend for one specific parfum)
+df["Title"].fillna("Naomi Campbell", inplace=True)
 
-        def beautify(naming):
-            cats = ["Bodylotion", "Bodyspray", "Eau de Cologne", "Eau de Parfum", "Eau de Toilette", "Geschenkset", "Bodymist", "Eau Frâiche", "Eau Fraîche", "Spray", "Körperspray", "EdP"]
-            for cat in cats:
-                if cat in naming:
-                    name = naming.replace(cat, "")
-            return name
-
-        def brander(name):
-            global marken
-            marken = ["Abercrombie & Fitch", "Arden", "Beyonce", "Biotherm", "Blue Up", "Britney Spears", "Bruno Banani", "Bulgari", "Burberry", "Cabochard", "Cabotine", "Cacharel", "Calvin Klein", "Carolina Herrera", "Cartier", "Cerruti", "Chloé", "Chopard", "Christina Aguilera", "Clean", "Clinique", "Coach", "Davidoff", "Diesel", "Dior", "DKNY", "Dolce & Gabbana", "Emporio Armani", "Escada", "Estée Lauder", "Gaultier", "Giorgio", "Grês", "Gucci", "Guerlain", "Guess", "Hermès", "Hollister", "Hugo Boss", "Issey Miyake", "James Bond", "Jean Patou", "Jean Paul Gaultier", "Jil Sander", "Jimmy Choo", "J.Lo", "JOOP!", "Juicy Couture", "Karl Lagerfeld", "Katy Perry", "Kenzo", "Lacoste", "Lady Gaga", "Lancôme", "Lanvin", "Laura Biagiotti", "Mexx", "Michael Kors", "Missoni", "Moschino", "Musk", "Naomi Campbell", "Narciso Rodriguez", "Nina Ricci", "Paco Rabanne", "Pepe Jeans London", "Prada", "Rainbow", "Ralph Lauren", "Rihanna", "Roberto Cavalli", "Sisley", "Slava Zaitsev", "s.Oliver", "Thierry Mugler", "Grês", "Tiffany", "Tommy Girl", "Vera Wang", "Versace", "Victoria's Secret", "Yves Saint Laurent", "Zadig & Voltaire", "Revlon", "Sabatini", "Gloria Vanderbilt", "S. Oliver"]
-            korrektur = {"Giorgio": "Giorgio Armani"}
-            for marke in marken:
-                if marke in name:
-                    brand = marke
-                    if brand == "Giorgio":
-                        brand = "Giorgio Armani"
-                    if brand == "Arden":
-                        brand = "Elizabeth Arden"
-                    if brand == "S. Oliver":
-                        brand = "s.Oliver"
-                else:
-                    continue
-                return brand
-
-        def finalizing(name):
-            for marke in marken:
-                if marke in name:
-                    if marke == "Giorgio":
-                        marke = "Giorgio Armani"
-                    if marke == "Arden":
-                        marke = "Elizabeth Arden"
-                    if marke == "S. Oliver":
-                        marke = "s.Oliver"
-                    title = name.replace(marke, "")
-                else:
-                    continue
-                return title
-
-        def crawling(element):
-            description = element.select_one("h2").text
-            naming = namer(description)
-            kategorie = catsmaker(naming)
-            name = beautify(naming)
-            brand = brander(name)
-            title = finalizing(name)
-            print(title)
-            size_ml = sizer(description)
-            for thing in element.find_all("span"):
-                daten = thing.get("data-price-amount")
-                if daten != None:
-                    price = daten
-                else:
-                    continue
-
-            crawled = Product(title, brand, kategorie, size_ml, price)
-            articles.append(crawled)
-
-
-
-
-        articles = []
-        time.sleep(1)
-        r = requests.get(url)
-        soup = BeautifulSoup(r.text, "html.parser")
-
-        for element in soup.find_all("div", attrs={"class":"product-item-info per-product category-products-grid"}):
-            crawling(element)
-
-        #Seiten
-        pages = []
-        for filtering in soup.find_all("a", class_="page"):
-            seite = filtering.get("href")
-            if seite in pages:
-                continue
-            else:
-                pages.append(seite)
-
-        for thing in pages:
-            nextone = urljoin("https://www.ottos.ch/", str(thing))
-            link_two = requests.get(nextone)
-            suppe = BeautifulSoup(link_two.text, "html.parser")
-
-            for element in suppe.find_all("div", attrs={"class":"product-item-info per-product category-products-grid"}):
-                crawling(element)
-
-                for filtering in suppe.find_all("a", class_="page"):
-                    seite = filtering.get("href")
-                    if seite in pages:
-                        continue
-                    else:
-                        pages.append(seite)
-
-
-        print(pages)
-        return articles
-
-
-
-
-fetcher = ProductFetcher()
-#articles = fetcher.fetch()
-
-with open('testertest.csv', 'w', newline='', encoding="utf-8") as csvfile:
-    blogwriter = csv.writer(csvfile, delimiter=';', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-
-    for article in fetcher.fetch():
-        blogwriter.writerow( [article.title, article.brand, article.kategorie, article.size, article.price] )
-
-
-
-    # for ding in element.select("div", class_ = ("price-box price-final_price fl-product-price")):
-    #     print(ding)
-
-
+#correcting
+print(df.iloc[58])
 

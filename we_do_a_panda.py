@@ -6,6 +6,9 @@ def calculator(data):
     #setting up dataframe
     df = pd.read_csv(data, sep=";", names = ["Title", "Brand", "Kategorie", "ml", "Preis"])
 
+    #Cleaning
+    df.iloc[58] = df.iloc[58].replace(to_replace = 10, value=60)
+
     #Calculating price for 100ml
     df["Preis"] = pd.to_numeric(df["Preis"])
     df["ml"] = pd.to_numeric(df["ml"])
@@ -13,6 +16,9 @@ def calculator(data):
 
     #filling missing values for title (only happend for one specific parfum)
     df["Title"].fillna("Naomi Campbell", inplace=True)
+
+    #correcting
+    df.iloc[58]
 
     #export
     df.to_csv("ottos_meets_panda.csv", encoding="utf-8", index=False, header = True, sep=";")
