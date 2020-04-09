@@ -8,6 +8,7 @@ def calculator(data):
 
     #Cleaning
     df.iloc[58] = df.iloc[58].replace(to_replace = 10, value=60)
+    df.iloc[58] = df.iloc[58].replace(to_replace = "The Only One  50 ml & Mini", value="The Only One")
 
     #Calculating price for 100ml
     df["Preis"] = pd.to_numeric(df["Preis"])
