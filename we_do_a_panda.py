@@ -17,9 +17,6 @@ def calculator(data):
     #filling missing values for title (only happend for one specific parfum)
     df["Title"].fillna("Naomi Campbell", inplace=True)
 
-    #correcting
-    df.iloc[58]
-
     #export
     df.to_csv("ottos_meets_panda.csv", encoding="utf-8", index=False, header = True, sep=";")
 
