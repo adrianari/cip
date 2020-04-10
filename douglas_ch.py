@@ -6,13 +6,13 @@ import csv
 
 
 class Product():
-    def __init__(self, title, brand_line, price, base_price, discount_price, strikethrough_price, category): #, image):
+    def __init__(self, title, brand_line, price, base_price, strikethrough_price, category): #, image):
         self.title = title
         self.brand_line = brand_line
         self.category = category
         self.price = price
         self.base_price = base_price
-        self.discount_price = discount_price
+        #self.discount_price = discount_price
         self.strikethrough_price = strikethrough_price
         self.category = category
         #self.image = image
@@ -34,17 +34,20 @@ class ProductFetcher():
             price = product.select_one(".product-price__no-discount")
             if price:
                 price = price.text
+            if not price:
+                price = product.select_one(".product-price__discount")
+                price = price.text
             base_price = product.select_one(".product-price__base-price").text
-            discount_price = product.select_one(".product-price__discount")
-            if discount_price:
-                discount_price = discount_price.text
+            #discount_price = product.select_one(".product-price__discount")
+            #if discount_price:
+            #    discount_price = discount_price.text
             strikethrough_price = product.select_one(".product-price__strikethrough")
             if strikethrough_price:
                 strikethrough_price = strikethrough_price.text
             #image = product.select_one("img").attrs["src"]
 
 
-            crawled = Product(title, brand_line, price, base_price, discount_price, strikethrough_price, category) #, image)
+            crawled = Product(title, brand_line, price, base_price, strikethrough_price, category) #, image)
             articles.append(crawled)
 
         homepages = []
@@ -69,17 +72,20 @@ class ProductFetcher():
                 price = product.select_one(".product-price__no-discount")
                 if price:
                     price = price.text
+                if not price:
+                    price = product.select_one(".product-price__discount")
+                    price = price.text
                 base_price = product.select_one(".product-price__base-price").text
-                discount_price = product.select_one(".product-price__discount")
-                if discount_price:
-                    discount_price = discount_price.text
+                #discount_price = product.select_one(".product-price__discount")
+                #if discount_price:
+                #    discount_price = discount_price.text
                 strikethrough_price = product.select_one(".product-price__strikethrough")
                 if strikethrough_price:
                     strikethrough_price = strikethrough_price.text
                 #image = product.select_one("img").attrs["src"]
 
 
-                crawled = Product(title, brand_line, price, base_price, discount_price, strikethrough_price,category) #, image)
+                crawled = Product(title, brand_line, price, base_price, strikethrough_price,category) #, image)
                 articles.append(crawled)
 
         return articles
@@ -95,4 +101,4 @@ with open( 'douglas.ch.csv', 'w', newline='', encoding= "utf-8" ) as csvfile:
 
     for article in fetcher.fetch():
         blogwriter.writerow( [article.title, article.brand_line, article.category, article.price, article.base_price,
-                              article.discount_price, article.strikethrough_price] )
+                              article.strikethrough_price] )
