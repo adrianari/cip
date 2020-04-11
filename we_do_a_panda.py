@@ -9,6 +9,9 @@ def calculator(data):
     #Cleaning
     df.iloc[58] = df.iloc[58].replace(to_replace = 10, value=60)
     df.iloc[58] = df.iloc[58].replace(to_replace = "The Only One  50 ml & Mini", value="The Only One Set")
+    df.iloc[82] = df.iloc[82].replace(to_replace = "Collection Oriental Night Spray Femme  Natural Spray", value = "Collection Oriental Night Spray Femme")
+    df.iloc[129] = df.iloc[129].replace(to_replace = "See By   Eau de Toilette", value="See By")
+    df.iloc[291] = df.iloc[291].replace(to_replace = "Collection Glamour Femme  Natural Spray", value = "Collection Glamour Femme")
 
     #Delete multiple's (first 24 parfums due to setting up of pages crawling)
     df = df.drop([0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23])
