@@ -136,7 +136,6 @@ class ProductFetcher():
                     else:
                         pages.append(seite)
 
-        print(pages)
         return articles
 
 fetcher = ProductFetcher()
