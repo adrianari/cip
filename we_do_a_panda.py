@@ -26,7 +26,7 @@ def calculator(data):
     df["Title"].fillna("Naomi Campbell", inplace=True)
 
     #export
-    df.to_excel("Ottos_Pandas.xlsx")
+    df.to_excel("Ottos_Pandas.xlsx", index = False, header = True, encoding = "UTF-8")
 
 
 
