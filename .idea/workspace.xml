@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2bf6d8f3-a497-4ccf-9bd8-10c5ff5bf671" name="Default Changelist" comment="reload">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/douglas_de.py" beforeDir="false" afterPath="$PROJECT_DIR$/douglas_de.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ottos.csv" beforeDir="false" afterPath="$PROJECT_DIR$/ottos.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ottos.py" beforeDir="false" afterPath="$PROJECT_DIR$/ottos.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ottos_meets_panda.csv" beforeDir="false" afterPath="$PROJECT_DIR$/ottos_meets_panda.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/we_do_a_panda.py" beforeDir="false" afterPath="$PROJECT_DIR$/we_do_a_panda.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +39,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="OPEN_URL_DIALOG">
@@ -224,7 +221,9 @@
       <workItem from="1586717302944" duration="1921000" />
       <workItem from="1586776337924" duration="1293000" />
       <workItem from="1586789807010" duration="646000" />
-      <workItem from="1586865311052" duration="156000" />
+      <workItem from="1586865311052" duration="960000" />
+      <workItem from="1586992140897" duration="677000" />
+      <workItem from="1587054746245" duration="305000" />
     </task>
     <task id="LOCAL-00001" summary="Establishing the files">
       <created>1584824866455</created>
@@ -555,7 +554,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586718353395</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="reload">
+      <created>1586865481963</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1586865481963</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -621,10 +627,10 @@
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="481" y="231" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1500.960@0.0.1500.960" timestamp="1585829425564" />
-    <state x="385" y="80" key="CommitChangelistDialog2" timestamp="1586865449216">
+    <state x="385" y="80" key="CommitChangelistDialog2" timestamp="1586865481311">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state x="385" y="80" key="CommitChangelistDialog2/0.0.1500.960@0.0.1500.960" timestamp="1586865449216" />
+    <state x="385" y="80" key="CommitChangelistDialog2/0.0.1500.960@0.0.1500.960" timestamp="1586865481311" />
     <state x="93" y="93" width="1313" height="773" key="DiffContextDialog" timestamp="1585688933326">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
@@ -633,38 +639,42 @@
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="531" y="239" key="FileChooserDialogImpl/0.0.1500.960@0.0.1500.960" timestamp="1585383295474" />
-    <state width="1142" height="365" key="GridCell.Tab.0.bottom" timestamp="1586865461806">
+    <state width="1141" height="365" key="GridCell.Tab.0.bottom" timestamp="1587055044779">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1142" height="365" key="GridCell.Tab.0.bottom/0.0.1500.960@0.0.1500.960" timestamp="1586865461806" />
-    <state width="1142" height="365" key="GridCell.Tab.0.center" timestamp="1586865461806">
+    <state width="1141" height="365" key="GridCell.Tab.0.bottom/0.0.1500.960@0.0.1500.960" timestamp="1587055044779" />
+    <state width="1141" height="365" key="GridCell.Tab.0.center" timestamp="1587055044779">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1142" height="365" key="GridCell.Tab.0.center/0.0.1500.960@0.0.1500.960" timestamp="1586865461806" />
-    <state width="1142" height="365" key="GridCell.Tab.0.left" timestamp="1586865461806">
+    <state width="1141" height="365" key="GridCell.Tab.0.center/0.0.1500.960@0.0.1500.960" timestamp="1587055044779" />
+    <state width="1141" height="365" key="GridCell.Tab.0.left" timestamp="1587055044779">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1142" height="365" key="GridCell.Tab.0.left/0.0.1500.960@0.0.1500.960" timestamp="1586865461806" />
-    <state width="1142" height="365" key="GridCell.Tab.0.right" timestamp="1586865461806">
+    <state width="1141" height="365" key="GridCell.Tab.0.left/0.0.1500.960@0.0.1500.960" timestamp="1587055044779" />
+    <state width="1141" height="365" key="GridCell.Tab.0.right" timestamp="1587055044779">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1142" height="365" key="GridCell.Tab.0.right/0.0.1500.960@0.0.1500.960" timestamp="1586865461806" />
-    <state x="254" y="126" key="SettingsEditor" timestamp="1586865334055">
+    <state width="1141" height="365" key="GridCell.Tab.0.right/0.0.1500.960@0.0.1500.960" timestamp="1587055044779" />
+    <state x="463" y="199" key="MultipleFileMergeDialog" timestamp="1586865667433">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state x="254" y="126" key="SettingsEditor/0.0.1500.960@0.0.1500.960" timestamp="1586865334055" />
+    <state x="463" y="199" key="MultipleFileMergeDialog/0.0.1500.960@0.0.1500.960" timestamp="1586865667433" />
+    <state x="254" y="126" key="SettingsEditor" timestamp="1587055043172">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state x="254" y="126" key="SettingsEditor/0.0.1500.960@0.0.1500.960" timestamp="1587055043172" />
     <state x="343" y="217" key="Vcs.Push.Dialog.v2" timestamp="1586447465667">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="343" y="217" key="Vcs.Push.Dialog.v2/0.0.1500.960@0.0.1500.960" timestamp="1586447465667" />
-    <state x="458" y="309" key="com.intellij.ide.util.TipDialog" timestamp="1586865311467">
+    <state x="458" y="309" key="com.intellij.ide.util.TipDialog" timestamp="1587054751946">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state x="458" y="309" key="com.intellij.ide.util.TipDialog/0.0.1500.960@0.0.1500.960" timestamp="1586865311467" />
-    <state x="560" y="400" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586546983982">
+    <state x="458" y="309" key="com.intellij.ide.util.TipDialog/0.0.1500.960@0.0.1500.960" timestamp="1587054751946" />
+    <state x="560" y="400" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586865653161">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state x="560" y="400" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1500.960@0.0.1500.960" timestamp="1586546983982" />
+    <state x="560" y="400" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1500.960@0.0.1500.960" timestamp="1586865653160" />
     <state x="-7" y="-7" width="763" height="973" maximized="true" key="dock-window-1" timestamp="1586532511225">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
@@ -687,7 +697,7 @@
     <SUITE FILE_PATH="coverage/cip$ottos.coverage" NAME="ottos Coverage Results" MODIFIED="1586865370539" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/cip$douglas_de.coverage" NAME="douglas_de Coverage Results" MODIFIED="1586548133447" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/cip$Crawler_Aufgabe_Adriana_Ricklin.coverage" NAME="Crawler_Aufgabe_Adriana_Ricklin Coverage Results" MODIFIED="1584907277658" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../untitled/Block04" />
-    <SUITE FILE_PATH="coverage/cip$we_do_a_panda.coverage" NAME="we_do_a_panda Coverage Results" MODIFIED="1586865461791" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/cip$we_do_a_panda.coverage" NAME="we_do_a_panda Coverage Results" MODIFIED="1587055044762" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/cip$finaltest.coverage" NAME="finaltest Coverage Results" MODIFIED="1585480076214" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/cip$anothertest.coverage" NAME="anothertest Coverage Results" MODIFIED="1585842497530" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/cip$test.coverage" NAME="test Coverage Results" MODIFIED="1586718540322" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
